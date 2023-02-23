@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  console:
+    image: biocontainers/fastqc
+      - ./src:/src
+      - ./input:/data
+      - ./output:/output
+    command: fastqc --version
