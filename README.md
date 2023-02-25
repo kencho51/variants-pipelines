@@ -99,3 +99,7 @@ Interpretation: This variant is predicted to be benign based on its frequency in
 
 We recommend that the patient undergo further confirmatory testing, such as Sanger sequencing or targeted gene panel testing, to confirm these findings. Additionally, genetic counseling should be offered to the patient and their family members to discuss the implications of these results and any potential treatment options or management strategies.
 ```
+
+
+### Reference data source
+1. [mayo-test.vcf](https://bioinformaticstools.mayo.edu/research/vcf-miner-sample-vcfs/)
