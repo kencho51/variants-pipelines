@@ -55,3 +55,47 @@ freebayes -f reference.fasta sample.sorted.bam > sample.vcf
 
 # Annotate the variants with ANNOVAR or other annotation tools based on ACMG guidelines.
 ```
+
+And the example outputs could be something like:
+```
+Variant Classification Report for Patient X
+
+Variant ID: 123456
+Gene Name: BRCA1
+Variant Type: Missense
+Allele Frequency: 0.001
+Functional Impact Score: 0.98
+In-silico Prediction: Damaging (SIFT), Likely Pathogenic (PolyPhen)
+
+ACMG Classification:
+- PM2: This variant is absent in population databases with a frequency of less than 0.01.
+- PP3: Multiple lines of computational evidence support a deleterious effect on the gene or gene product (conservation, evolutionary, splicing impact, etc.).
+- PP4: Patient's phenotype or family history is highly specific for a disease with a single genetic etiology, and this variant has been identified in multiple patients with the same phenotype.
+
+Overall Classification: Likely Pathogenic (class 4)
+
+Comments:
+This missense variant in BRCA1 has a functional impact score of 0.98 and is predicted to be damaging by SIFT and likely pathogenic by PolyPhen. It is not present in population databases with a frequency greater than 0.01, and multiple lines of computational evidence support its deleterious effect on the gene. The patient's family history is highly specific for breast cancer, and this variant has been identified in multiple patients with the same phenotype. Therefore, this variant is classified as Likely Pathogenic (class 4) according to ACMG guidelines.
+```
+
+Or in this format:
+```
+Variant Interpretation and Reporting
+We identified a total of X variants in the patient's exome sequencing data. After applying our filtering criteria based on frequency, pathogenicity, and ACMG guidelines, we have narrowed down to Y variants of potential clinical significance.
+
+Based on our analysis, we have identified the following variants that are likely responsible for the patient's symptoms:
+
+Gene: ABCA4
+Variant: c.5461-10T>C
+Zygosity: Homozygous
+ACMG classification: Likely Pathogenic
+Interpretation: This variant has been previously reported in association with Stargardt disease, which is consistent with the patient's symptoms.
+
+Gene: BRCA2
+Variant: c.68-7T>A
+Zygosity: Heterozygous
+ACMG classification: Likely Benign
+Interpretation: This variant is predicted to be benign based on its frequency in the general population and the fact that it is not located in a known functional domain of the protein.
+
+We recommend that the patient undergo further confirmatory testing, such as Sanger sequencing or targeted gene panel testing, to confirm these findings. Additionally, genetic counseling should be offered to the patient and their family members to discuss the implications of these results and any potential treatment options or management strategies.
+```
