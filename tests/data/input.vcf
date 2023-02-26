@@ -1,0 +1,6 @@
+##fileformat=VCFv4.3
+##FILTER=<ID=PASS,Description="All filters passed">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr1	1000	.	A	G	.	PASS	AC=1
+chr2	2000	.	T	C	.	PASS	AC=1
