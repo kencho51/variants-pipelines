@@ -1,5 +1,8 @@
 import io
 import pytest
+import pysam
+import pyensembl
+from unittest.mock import patch
 
 # Import the function you want to test from the script
 from interpret_variants import interpret_variants

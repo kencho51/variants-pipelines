@@ -7,4 +7,8 @@ services:
      dockerfile: Dockerfile
     volumes:
       - .:/app
+      - type: bind
+        source: /home/codespace/.cache/pyensembl/GRCh38/ensembl97/
+        target: /root/.cache/pyensembl/GRCh38/ensembl97
+        read_only: true
     command: python3 --version

@@ -100,6 +100,23 @@ Interpretation: This variant is predicted to be benign based on its frequency in
 We recommend that the patient undergo further confirmatory testing, such as Sanger sequencing or targeted gene panel testing, to confirm these findings. Additionally, genetic counseling should be offered to the patient and their family members to discuss the implications of these results and any potential treatment options or management strategies.
 ```
 
+### How to execute the scripts
+```
+# Install the db
+$ pyensembl install --release 97 --species homo_sapiens
+# Build the image
+$ cd variants-pipelines
+$ docker-compose run --rm console bash
+root@744a84ca81be:/# python3 --version
+Python 3.6.9
+root@744a84ca81be:/# pytest --version
+pytest 7.0.1
+root@744a84ca81be:/# ls app
+Dockerfile  LICENSE  README.md  docker-compose.yml  inputs  outputs  requirements  src  tests
+root@744a84ca81be:/# pytest app/src/test_interpret_variants.py 
+
+```
+
 
 ### Reference data source
 1. [mayo-test.vcf](https://bioinformaticstools.mayo.edu/research/vcf-miner-sample-vcfs/)
