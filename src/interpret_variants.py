@@ -6,7 +6,7 @@ def interpret_variants(ref_fasta, input_vcf):
     ref = pysam.FastaFile(ref_fasta)
 
     # Load Ensembl genome annotation
-    ensembl = pyensembl.EnsemblRelease(release=98)
+    ensembl = pyensembl.EnsemblRelease(release=97)
 
     # Load input VCF file and interpret variants
     results = []
